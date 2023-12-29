@@ -7,4 +7,5 @@ npm i
 npm run dev
 ```
 
+[HERE](https://rockettown1.github.io/random-clock/)
 ![Clock](/screenshot.png)
