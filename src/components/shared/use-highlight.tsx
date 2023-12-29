@@ -1,8 +1,10 @@
-import React from "react";
+import { useState, useEffect } from "react";
 
 export const useHighlight = (word: string, wordsToHighlight: string[]) => {
-  const [highlight, setHighlight] = React.useState(false);
-  React.useEffect(() => {
+  const [highlight, setHighlight] = useState(false);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
     if (wordsToHighlight.includes(word)) {
       setHighlight(true);
     } else {
@@ -10,5 +12,13 @@ export const useHighlight = (word: string, wordsToHighlight: string[]) => {
     }
   }, [wordsToHighlight]);
 
-  return { highlight };
+  useEffect(() => {
+    if (shouldAnimate && !highlight) {
+      setShouldAnimate(false);
+    } else if (!shouldAnimate && highlight) {
+      setShouldAnimate(true);
+    }
+  }, [highlight]);
+
+  return { highlight, shouldAnimate };
 };
