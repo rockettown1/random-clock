@@ -4,7 +4,7 @@ import { getWords } from "./converter";
 export const useTime = () => {
   const [minutesToHighlight, setMinutesToHighlight] = React.useState(["IT'S"]);
   const [hoursToHighlight, setHoursToHighlight] = React.useState<string[]>([]);
-  const INTERVAL = 30000;
+  const INTERVAL = 10000;
 
   //   first load
   React.useEffect(() => {
