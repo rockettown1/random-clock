@@ -1,0 +1,15 @@
+export const words_hours = [
+  "ONE",
+  "THREE",
+  "TWO",
+  "FOUR",
+  "FIVE",
+  "SIX",
+  "SEVEN",
+  "EIGHT",
+  "NINE",
+  "TEN",
+  "ELEVEN",
+  "TWELVE",
+  "O'CLOCK",
+];
