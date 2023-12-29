@@ -26,7 +26,7 @@ const App = () => {
 export default App;
 
 const Box = styled.div`
-  max-width: 600px;
+  max-width: 750px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

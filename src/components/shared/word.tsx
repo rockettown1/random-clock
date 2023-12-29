@@ -24,7 +24,8 @@ type ItemProps = {
 
 export const Item = styled.h1<ItemProps>`
   margin: 0 20px;
-  font-size: 64px;
+  font-size: calc(20px + 3.6vw);
+  line-height: calc(30px + 3.6vw);
   color: rgba(255, 255, 255, 0.15);
   text-shadow: ${({ $highlight }) =>
     $highlight &&
