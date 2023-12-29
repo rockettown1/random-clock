@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { useHighlight } from "../shared/use-highlight";
 
 type HoursProps = {
@@ -24,7 +24,6 @@ export const Item = styled.h1<ItemProps>`
   text-shadow: ${({ $highlight }) =>
     $highlight &&
     `
-    
     0 0 10px #fff,
     0 0 21px #a9e4e0,
     0 0 42px #145088`};
