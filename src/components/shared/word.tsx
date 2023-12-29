@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useHighlight } from "../shared/use-highlight";
 
 type HoursProps = {
@@ -21,4 +21,11 @@ export const Item = styled.h1<ItemProps>`
   font-size: 64px;
   color: ${({ $highlight }) =>
     $highlight ? "rgb(255,255,255)" : "rgb(21, 21, 21)"};
+  text-shadow: ${({ $highlight }) =>
+    $highlight &&
+    `
+    
+    0 0 10px #fff,
+    0 0 21px #a9e4e0,
+    0 0 42px #145088`};
 `;

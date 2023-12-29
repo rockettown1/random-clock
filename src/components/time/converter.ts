@@ -68,5 +68,18 @@ export const getWords = () => {
   const mins = showMinutes(roundedMinutes);
   const hour = showHours(roundedMinutes, hours);
 
-  return { joiner, mins, hour };
+  const newMinutes = ["IT'S"];
+  if (joiner) {
+    newMinutes.push(joiner);
+  }
+  if (mins) {
+    newMinutes.push(...mins);
+  }
+  const newHours = [];
+
+  if (hour) {
+    newHours.push(...hour);
+  }
+
+  return { newMinutes, newHours };
 };

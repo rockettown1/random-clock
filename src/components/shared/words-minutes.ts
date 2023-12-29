@@ -1,5 +1,5 @@
 export const words_minutes = [
-  "IT IS",
+  "IT'S",
   "HALF",
   "TEN",
   "QUARTER",

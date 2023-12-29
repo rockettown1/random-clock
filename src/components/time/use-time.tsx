@@ -1,52 +1,25 @@
 import React from "react";
-import { getWords, pastTo, showHours, showMinutes } from "./converter";
-import { getTime } from "./get-time";
+import { getWords } from "./converter";
 
 export const useTime = () => {
-  const [minutesToHighlight, setMinutesToHighlight] = React.useState(["IT IS"]);
+  const [minutesToHighlight, setMinutesToHighlight] = React.useState(["IT'S"]);
   const [hoursToHighlight, setHoursToHighlight] = React.useState<string[]>([]);
-  const MINUTE = 60000;
+  const INTERVAL = 30000;
 
   //   first load
   React.useEffect(() => {
-    const { joiner, mins, hour } = getWords();
-
-    const tempMins = ["IT IS"];
-    if (joiner) {
-      tempMins.push(joiner);
-    }
-    if (mins) {
-      tempMins.push(...mins);
-    }
-    const tempHours = [];
-
-    if (hour) {
-      tempHours.push(...hour);
-    }
-    setHoursToHighlight(tempHours);
-    setMinutesToHighlight(tempMins);
+    const { newMinutes, newHours } = getWords();
+    setMinutesToHighlight(newMinutes);
+    setHoursToHighlight(newHours);
   }, []);
 
-  //   Updates every 60 seconds
+  //   Updates every 30 seconds
   React.useEffect(() => {
     const interval = setInterval(() => {
-      const { joiner, mins, hour } = getWords();
-
-      const tempMins = ["IT IS"];
-      if (joiner) {
-        tempMins.push(joiner);
-      }
-      if (mins) {
-        tempMins.push(...mins);
-      }
-      const tempHours = [];
-
-      if (hour) {
-        tempHours.push(...hour);
-      }
-      setHoursToHighlight(tempHours);
-      setMinutesToHighlight(tempMins);
-    }, MINUTE);
+      const { newMinutes, newHours } = getWords();
+      setMinutesToHighlight(newMinutes);
+      setHoursToHighlight(newHours);
+    }, INTERVAL);
 
     return () => clearInterval(interval);
   }, []);
