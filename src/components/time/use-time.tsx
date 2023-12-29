@@ -13,7 +13,7 @@ export const useTime = () => {
     setHoursToHighlight(newHours);
   }, []);
 
-  //   Updates every 30 seconds
+  //   Updates every 10 seconds
   React.useEffect(() => {
     const interval = setInterval(() => {
       const { newMinutes, newHours } = getWords();

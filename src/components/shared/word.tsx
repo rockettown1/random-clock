@@ -38,9 +38,9 @@ export const Item = styled.h1<ItemProps>`
   animation: ${({ $shouldAnimate }) =>
     $shouldAnimate
       ? css`
-          ${toGlow} 2s ease
+          ${toGlow} 2s ease;
         `
       : css`
-          ${fromGlow} 2s ease
+          ${fromGlow} 2s ease;
         `};
 `;
