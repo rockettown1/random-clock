@@ -2,12 +2,12 @@ import styled, { css } from "styled-components";
 import { useHighlight } from "../shared/use-highlight";
 import { toGlow, fromGlow } from "./animations";
 
-type HoursProps = {
+type WordProps = {
   word: string;
   wordsToHighlight: string[];
 };
 
-export const Word = ({ word, wordsToHighlight }: HoursProps) => {
+export const Word = ({ word, wordsToHighlight }: WordProps) => {
   const { highlight, shouldAnimate } = useHighlight(word, wordsToHighlight);
 
   return (
