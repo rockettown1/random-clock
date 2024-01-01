@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { Word } from "./components/shared/word";
-import { words_minutes } from "./components/shared/words-minutes";
+import { Word } from "./components/word/word";
+import { words_minutes } from "./components/word/words-minutes";
 import { useTime } from "./components/time/use-time";
-import { words_hours } from "./components/shared/words-hours";
+import { words_hours } from "./components/word/words-hours";
 
 const App = () => {
   const { minutesToHighlight, hoursToHighlight } = useTime();

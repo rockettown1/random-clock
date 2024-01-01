@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
-import { useHighlight } from "../shared/use-highlight";
-import { toGlow, fromGlow } from "./animations";
+import { useHighlight } from "../lib/use-highlight";
+import { toGlow, fromGlow } from "../lib/animations";
 
 type WordProps = {
   word: string;
